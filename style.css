@@ -1,0 +1,63 @@
+body {
+  background-image: linear-gradient(to bottom, #1874ca 0%, #0f0875 100%);
+  margin: 10px;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.clock {
+  background: white;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.2),
+    0 0 0 4px rgba(255, 255, 255, 1);
+}
+
+.clock-face {
+  background: url(./images/clock.png);
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+.hour-hand {
+  width: 30%;
+  left: 20%;
+  background: black;
+}
+
+.minute-hand {
+  width: 40%;
+  left: 10%;
+  background: black;
+}
+
+.second-hand {
+  background: rgb(185, 43, 43);
+}
+
+@media screen and (max-width: 450px) {
+  .clock {
+    width: 200px;
+    height: 200px;
+  }
+}
